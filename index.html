@@ -33,8 +33,7 @@ function saludar (){
 
   </head>
   <body>
-  
-  
+ 
   <h1>Hola mundo</h1>
 <p>Esta es mi primera pagina web hecha desde mi celular.</p>
 
@@ -56,4 +55,62 @@ function saludar (){
 </form>
 
 </body>
+ <h2>Formulario de contacto</h2>
+  <form id="formulario">
+  <label>Nombre:</label><br>
+  <input type="text" id="nombre" placeholder="Escribe tu nombre"><br><br>
+  
+  <input type="email" id="correo" placeholder="Escribe tu correo"><br><br>
+  
+  <label>Mensaje:</label><br>
+  <input type="mensaje" placeholder="Escribe un mensaje"></textarea><br><br>
+  
+  <button type="submit">Enviar</button>
+  
+  </form>
+  <p id="respuesta"></p>
+<style>
+  form{
+    margin-top:20px;
+  }
+
+input, textarea{
+  
+  width:250px;
+  padding:8px;
+  border-radius:6px;
+  border:none;
+  margin-top:5px;
+  
+}
+
+textarea{
+  heigth:80px
+}
+
+button{
+  padding:10px 20px;
+  border:none;
+  background:#36bdf8;
+  color:white;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+button:hover{
+  
+  background:#0ea5e9;
+  
+}
+<script>
+document.getElementById("formulario").addEventListener("submit",function(event)){
+  event.preventDefault();
+  
+  let nombre = document.getElementById("nombre").value;
+  ket respuesta = document.getElementById("respuesta");
+  
+  respuesta.textContent = "Gracias " + nombre + ", tu mensaje fue enviado.";
+
+});
+</style>
 </form>
